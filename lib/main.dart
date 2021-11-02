@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_project/Messenger.dart';
+import 'package:flutter_project/editpage.dart';
+import 'package:flutter_project/posts_page.dart';
+import 'package:flutter_project/profile.dart';
+
+import 'package:flutter_project/splash.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+
+        primarySwatch: Colors.blue,
+
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: Splash(),
+    );
+  }
+}
+
