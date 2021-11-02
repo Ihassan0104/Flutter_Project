@@ -10,39 +10,48 @@ List<Following>following =[
   Following(
       username: "Abdur Rajjak",
       profileImageURL: "images/Profile_Images/user_1.jpg",
-      dateTime: DateTime.now().toUtc().toString()),
+      dateTime: DateTime.now().toUtc().toString()
+  ),
   Following(
       username: "Shakib Al Hasan",
       profileImageURL: "images/Profile_Images/user_2.jpg",
-      dateTime: DateTime.now().toUtc().toString()),
+      dateTime: DateTime.now().toUtc().toString()
+  ),
   Following(
       username: "Tawsif Mahbub",
       profileImageURL: "images/Profile_Images/user_3.jpg",
-      dateTime: DateTime.now().toUtc().toString()),
+      dateTime: DateTime.now().toUtc().toString()
+  ),
   Following(
       username: "Mosharraf Karim",
       profileImageURL: "images/Profile_Images/user_4.jpg",
-      dateTime: DateTime.now().toUtc().toString()),
+      dateTime: DateTime.now().toUtc().toString()
+  ),
   Following(
       username: "Chanchal Chowdhury",
       profileImageURL: "images/Profile_Images/user_5.jpg",
-      dateTime: DateTime.now().toUtc().toString()),
+      dateTime: DateTime.now().toUtc().toString()
+  ),
   Following(
       username: "Afran Nisho",
       profileImageURL: "images/Profile_Images/user_6.jpg",
-      dateTime: DateTime.now().toUtc().toString()),
+      dateTime: DateTime.now().toUtc().toString()
+  ),
   Following(
       username: "Ziaul Faruq Apurba",
       profileImageURL: "images/Profile_Images/user_7.jpg",
-      dateTime: DateTime.now().toUtc().toString()),
+      dateTime: DateTime.now().toUtc().toString()
+  ),
   Following(
       username: "Siam Ahmed",
       profileImageURL: "images/Profile_Images/user_8.jpg",
-      dateTime: DateTime.now().toUtc().toString()),
+      dateTime: DateTime.now().toUtc().toString()
+  ),
   Following(
       username: "Mashrafe Mortaza",
       profileImageURL: "images/Profile_Images/user_10.jpg",
-      dateTime: DateTime.now().toUtc().toString()),
+      dateTime: DateTime.now().toUtc().toString()
+  ),
 ];
 class Following_Page extends StatefulWidget {
   const Following_Page({Key key}) : super(key: key);
@@ -112,19 +121,31 @@ class _Following_PageState extends State<Following_Page> {
                         radius: 35,
                         backgroundImage: AssetImage("${following[index].profileImageURL}"),
                       ),
-                      Expanded(child: RichText(
-                        textAlign: TextAlign.justify,
+                      Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 12),
+                            child: RichText(
+                        textAlign: TextAlign.start,
                         text: TextSpan(
-                          text: "${following[index].username}",
-                          style: Text,
-                          children: [
-                            TextSpan(
-                              text: ,
-                              style: ,
-                            )
-                          ],
+                            text: "${following[index].username}\n",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
+                              color: Color.fromRGBO(21, 21, 21, 0.6),
+                            ),
+                            children: [
+                              TextSpan(
+                                text: "${following[index].dateTime}",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w700,
+                                  color: Color.fromRGBO(21, 21, 21, 0.6),
+                                ),
+                              ),
+                            ],
                         ),
-                      )
+                      ),
+                          ),
                       ),
                     ],
                   )
